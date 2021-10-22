@@ -65,13 +65,13 @@ MIDI.sendNoteOn(36, co2vol, 1);
 delay(2500);
 MIDI.sendNoteOff(36, 100, 1);
 
-  if (sgp.eCO2 > 700) {
+  if (sgp.eCO2 > 900) {
   MIDI.sendNoteOn(37, co2vol, 1);
   MIDI.sendNoteOn(36, co2vol, 2);
   MIDI.sendNoteOn(co2note, 110, 2);
   }
   
-  if (sgp.eCO2 > 900) {
+  if (sgp.eCO2 > 1200) {
   lcd.setCursor(15,1);
   lcd.blink();
   MIDI.sendNoteOn(co2note, 127, 3);
